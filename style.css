@@ -264,7 +264,7 @@ nav {
   font-size: 4.5rem;
   color: var(--gold-light);
   direction: rtl;
-  line-height: 1;
+  line-height: 1.4;
   margin-bottom: 1.5rem;
   opacity: 0.9;
 }
