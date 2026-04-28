@@ -516,47 +516,93 @@
 
 <!-- ══ CONTACT ══ -->
 <section class="contact" id="contact">
-  <div class="section-label" lang-si>ඔබේ දෑත අල්ලාගෙන</div>
-  <div class="section-label" lang-ta>உங்கள் கைகளை பிடித்து</div>
   <h2 class="section-title" lang-si>ඔබේ ප්‍රශ්නය <em>අප වෙත එවන්න.</em></h2>
   <h2 class="section-title" lang-ta>உங்கள் கேள்வியை <em>எங்களுக்கு அனுப்புங்கள்.</em></h2>
   <p class="contact-subtitle" lang-si>කිසිම බල කිරීමක් නැහැ. ඔබේ නම සහ ප්‍රශ්නය එවන්න — කිසිම බල කිරීමකින් තොරව අපි ඔබ වෙත සම්බන්ධ වෙමු.</p>
   <p class="contact-subtitle" lang-ta>எந்த கட்டாயமும் இல்லை. உங்கள் பெயரும் கேள்வியும் அனுப்புங்கள் — நாங்கள் கட்டாயமில்லாமல் பதில் அளிப்போம்.</p>
 
+ <!-- ══ CONTACT ══ -->
+<section class="contact" id="contact">
+  <h2 class="section-title" lang-si>ඔබේ ප්‍රශ්නය <em>අප වෙත එවන්න.</em></h2>
+  <h2 class="section-title" lang-ta>உங்கள் கேள்வியை <em>எங்களுக்கு அனுப்புங்கள்.</em></h2>
+  <p class="contact-subtitle" lang-si>කිසිම බල කිරීමක් නැහැ. ඔබේ නම සහ ප්‍රශ්නය එවන්න — අපි ඔබ වෙත සම්බන්ධ වෙමු.</p>
+  <p class="contact-subtitle" lang-ta>எந்த கட்டாயமும் இல்லை. உங்கள் பெயரும் கேள்வியும் அனுப்புங்கள் — நாங்கள் பதில் அளிப்போம்.</p>
+
   <div class="form-wrap">
-    <div id="form-box">
+
+    <!-- Formspree success message -->
+    <div data-fs-success class="form-success" style="display:none;">
+      <div class="success-check">✓</div>
+      <h3 lang-si>ස්තූතියි!</h3>
+      <h3 lang-ta>நன்றி!</h3>
+      <p lang-si>ඔබේ ප්‍රශ්නය ලැබිණ. අපි ඉක්මනින් ඔබ වෙත සම්බන්ධ වෙමු.</p>
+      <p lang-ta>உங்கள் கேள்வி கிடைத்தது. நாங்கள் விரைவில் தொடர்பு கொள்வோம்.</p>
+    </div>
+
+    <!-- Formspree form-level error -->
+    <div data-fs-error style="color:#C4522A; font-size:0.85rem; margin-bottom:1rem; text-align:center;"></div>
+
+    <form id="contact-form">
+
       <div class="form-group">
         <label class="form-label" lang-si>ඔබේ නම</label>
         <label class="form-label" lang-ta>உங்கள் பெயர்</label>
-        <input class="form-input" type="text" id="fname" placeholder="ඔබේ නම / உங்கள் பெயர்..." />
+        <input
+          class="form-input"
+          type="text"
+          name="name"
+          data-fs-field
+          required
+          placeholder="ඔබේ නම / உங்கள் பெயர்..."
+        />
+        <span data-fs-error="name" style="color:#C4522A; font-size:0.8rem;"></span>
       </div>
+
       <div class="form-group">
         <label class="form-label" lang-si>දුරකථන අංකය හෝ ඉමේල් (විකල්ප)</label>
         <label class="form-label" lang-ta>தொலைபேசி எண் அல்லது மின்னஞ்சல் (விருப்பம்)</label>
-        <input class="form-input" type="text" id="fcontact" placeholder="WhatsApp / Email..." />
+        <input
+          class="form-input"
+          type="text"
+          name="contact"
+          data-fs-field
+          placeholder="WhatsApp / Email..."
+        />
+        <span data-fs-error="contact" style="color:#C4522A; font-size:0.8rem;"></span>
       </div>
+
       <div class="form-group">
         <label class="form-label" lang-si>ඔබේ ප්‍රශ්නය හෝ සටහන</label>
         <label class="form-label" lang-ta>உங்கள் கேள்வி அல்லது குறிப்பு</label>
-        <textarea class="form-textarea" id="fmsg" rows="5" placeholder="ඉස්ලාම් ගැන දැනගැනීමට... / இஸ்லாம் பற்றி அறிய..."></textarea>
+        <textarea
+          class="form-textarea"
+          name="message"
+          data-fs-field
+          rows="5"
+          required
+          placeholder="ඉස්ලාම් ගැන දැනගැනීමට... / இஸ்லாம் பற்றி அறிய..."
+        ></textarea>
+        <span data-fs-error="message" style="color:#C4522A; font-size:0.8rem;"></span>
       </div>
-      <div class="form-group">
-        <label class="form-label" lang-si>ඔබ කැමති ප්‍රතිචාර ආකාරය</label>
-        <label class="form-label" lang-ta>விரும்பும் பதில் முறை</label>
-        <div class="radio-group">
-          <label class="radio-label" lang-si><input type="radio" name="pref" value="wa" checked /> WhatsApp</label>
-          <label class="radio-label" lang-si><input type="radio" name="pref" value="email" /> ඉමේල්</label>
-          <label class="radio-label" lang-si><input type="radio" name="pref" value="call" /> දුරකථනය</label>
-          <label class="radio-label" lang-si><input type="radio" name="pref" value="none" /> අනවශ්‍ය</label>
-          <label class="radio-label" lang-ta><input type="radio" name="pref2" value="wa" checked /> வாட்சாப்</label>
-          <label class="radio-label" lang-ta><input type="radio" name="pref2" value="email" /> மின்னஞ்சல்</label>
-          <label class="radio-label" lang-ta><input type="radio" name="pref2" value="call" /> தொலைபேசி</label>
-          <label class="radio-label" lang-ta><input type="radio" name="pref2" value="none" /> தேவையில்லை</label>
-        </div>
-      </div>
-      <button class="btn-submit" lang-si onclick="submitForm()">ප්‍රශ්නය එවන්න →</button>
-      <button class="btn-submit" lang-ta onclick="submitForm()">கேள்வியை அனுப்பு →</button>
-    </div>
+
+      <button class="btn-submit" type="submit" data-fs-submit-btn lang-si>ප්‍රශ්නය එවන්න →</button>
+      <button class="btn-submit" type="submit" data-fs-submit-btn lang-ta>கேள்வியை அனுப்பு →</button>
+
+    </form>
+  </div>
+</section>
+
+<!-- Formspree Ajax SDK — place just before </body> -->
+<script>
+  window.formspree = window.formspree || function () {
+    (formspree.q = formspree.q || []).push(arguments);
+  };
+  formspree('initForm', {
+    formElement: '#contact-form',
+    formId: 'mvzdegrv'
+  });
+</script>
+<script src="https://formspree.io/f/mvzdegrv" defer></script>
 
     <div class="form-success" id="form-success">
       <div class="success-check">✓</div>
