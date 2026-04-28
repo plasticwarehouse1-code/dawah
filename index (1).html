@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>සත්‍යය · உண்மை · Sri Lanka Da'wah</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-emblem">
+      <!-- Crescent + star SVG icon -->
+      <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 3C8.477 3 4 7.477 4 13c0 5.523 4.477 10 10 10 1.2 0 2.35-.21 3.42-.6C13.6 20.9 11 17.24 11 13c0-4.24 2.6-7.9 6.42-9.4A9.93 9.93 0 0014 3z"/>
+        <circle cx="21" cy="8" r="2"/>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-si">සත්‍යය</span>
+      <span class="nav-logo-ta">உண்மை</span>
+      <span class="nav-logo-sub">SRI LANKA · DA'WAH</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#tawheed" lang-si>මැවුම්කරු</a><a href="#tawheed" lang-ta>படைத்தவன்</a></li>
+    <li><a href="#science" lang-si>කුර්ආනය</a><a href="#science" lang-ta>குர்ஆன்</a></li>
+    <li><a href="#prophets" lang-si>නබිවරු</a><a href="#prophets" lang-ta>நபிமார்கள்</a></li>
+    <li><a href="#pillars" lang-si>ජීවන මග</a><a href="#pillars" lang-ta>வாழ்வு முறை</a></li>
+    <li><a href="#faq" lang-si>ප්‍රශ්න</a><a href="#faq" lang-ta>கேள்விகள்</a></li>
+    <li><a href="#contact" lang-si>සම්බන්ධ වන්න</a><a href="#contact" lang-ta>தொடர்பு</a></li>
+  </ul>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('si')">සිංහල</button>
+    <button class="lang-btn" onclick="setLang('ta')">தமிழ்</button>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="home">
+  <!-- Geometric SVG background pattern -->
+  <svg class="hero-pattern" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="geo" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+        <polygon points="40,5 75,25 75,55 40,75 5,55 5,25" fill="none" stroke="#1C3A2A" stroke-width="0.5"/>
+        <circle cx="40" cy="40" r="3" fill="#C4952A" opacity="0.3"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#geo)"/>
+    <!-- Large decorative circle -->
+    <circle cx="950" cy="350" r="280" fill="none" stroke="#C4952A" stroke-width="0.8" opacity="0.15"/>
+    <circle cx="950" cy="350" r="200" fill="none" stroke="#C4952A" stroke-width="0.5" opacity="0.1"/>
+    <circle cx="950" cy="350" r="120" fill="#C4952A" opacity="0.04"/>
+  </svg>
+
+  <div class="hero-content">
+    <span class="hero-label" lang-si>ශ්‍රී ලංකාවේ සිංහල භාෂාවෙන්</span>
+    <span class="hero-label" lang-ta>இலங்கையில் தமிழிலும்</span>
+
+    <h1 lang-si>ඉස්ලාම් යනු<br><em>ඇත්තටම කුමක්ද?</em></h1>
+    <h1 lang-ta>இஸ்லாம் என்றால்<br><em>உண்மையில் என்ன?</em></h1>
+
+    <p class="hero-subtitle" lang-si>
+      මෙය ඔබට ආරාධනයකි. තර්කයක් නොවේ. බල කිරීමක් නොවේ.
+      ඔබේම භාෂාවෙන්, ඔබේම වේගයෙන්, විවෘත හදවතකින් සත්‍යය සොයා බලන්න.
+    </p>
+    <p class="hero-subtitle" lang-ta>
+      இது உங்களுக்கான அழைப்பு. வாதமில்லை. கட்டாயமில்லை.
+      உங்கள் மொழியில், உங்கள் வேகத்தில், திறந்த மனதோடு உண்மையை தேடுங்கள்.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#tawheed" class="btn-primary" lang-si>ආරම්භ කරන්න →</a>
+      <a href="#tawheed" class="btn-primary" lang-ta>தொடங்குங்கள் →</a>
+      <a href="#science" class="btn-outline" lang-si>කුර්ආනය ගැන දැනගන්න</a>
+      <a href="#science" class="btn-outline" lang-ta>குர்ஆனை அறியுங்கள்</a>
+    </div>
+  </div>
+
+  <!-- Right side: decorative card -->
+  <div class="hero-visual">
+    <!-- Decorative geometric frame SVG -->
+    <svg style="position:absolute;top:-40px;right:-40px;width:320px;height:320px;opacity:0.08;" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="160,10 310,90 310,230 160,310 10,230 10,90" fill="none" stroke="#1C3A2A" stroke-width="2"/>
+      <polygon points="160,40 280,105 280,215 160,280 40,215 40,105" fill="none" stroke="#C4952A" stroke-width="1"/>
+    </svg>
+
+    <div class="hero-card">
+      <!-- Card pattern -->
+      <svg class="hero-card-pattern" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="cp" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+            <polygon points="15,2 28,9 28,21 15,28 2,21 2,9" fill="none" stroke="#C4952A" stroke-width="0.8"/>
+          </pattern>
+        </defs>
+        <rect width="180" height="180" fill="url(#cp)"/>
+      </svg>
+
+      <div class="hero-card-arabic">لَآ إِكْرَاهَ<br>فِى ٱلدِّينِ</div>
+      <div class="hero-card-verse">
+        <p lang-si>"ආගමේ බල කිරීමක් නොමැත."</p>
+        <p lang-ta>"மார்க்கத்தில் கட்டாயம் இல்லை."</p>
+        <div class="hero-card-ref">Al-Quran · 2:256</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TAWHEED ══ -->
+<section class="tawheed" id="tawheed">
+  <div class="tawheed-bg"></div>
+
+  <!-- Decorative star pattern -->
+  <svg style="position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;opacity:0.05;pointer-events:none;" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="200,10 240,140 380,140 270,220 310,350 200,270 90,350 130,220 20,140 160,140" fill="#C4952A"/>
+  </svg>
+
+  <div class="section-label" lang-si>තව්හීද් · මැවුම්කරුගේ ඒකීයත්වය</div>
+  <div class="section-label" lang-ta>தவ்ஹீத் · இறைவனின் ஏகத்துவம்</div>
+  <h2 class="section-title" lang-si>එක මැවුම්කරුවෙක්. <em>සැබෑ.</em></h2>
+  <h2 class="section-title" lang-ta>ஒரே படைத்தவன். <em>உண்மை.</em></h2>
+
+  <div class="tawheed-grid">
+    <div class="tawheed-left">
+      <p lang-si>ඉස්ලාමයේ මූලික ඉගැන්වීම: මෙම අසීමිත විශ්වය තනිවම පැමිණ නැත. එහි පිටුපස මැවුම්කරුවෙක් සිටී — ඒකීය, ඔහුට සමානයන් නැති, ආරම්භයක් හෝ අවසානයක් නැති.</p>
+      <p lang-ta>இஸ்லாமின் அடிப்படை கோட்பாடு: இந்த பிரபஞ்சம் தானாக தோன்றவில்லை. அதன் பின்னால் ஒரே படைத்தவன் உள்ளான் — ஒருவன், ஒப்பற்றவன், தொடக்கமும் முடிவும் இல்லாதவன்.</p>
+      <p lang-si>ஔහுட හවුල්කරු නැත. දරුවන් නැත. සමානයන් නැත. ඔබේ සිතුවිලි පවා ඔහු දනියි. ඔබේ දයාව ඔහු හදවතින් දනියි.</p>
+      <p lang-ta>அவனுக்கு இணையில்லை. பிள்ளைகளில்லை. ஒப்பில்லை. உங்கள் எண்ணங்களை கூட அவன் அறிவான். உங்கள் வலியை அவன் இதயத்தில் உணர்கிறான்.</p>
+
+      <div class="tawheed-pillars">
+        <div class="pillar">
+          <div class="pillar-num">01</div>
+          <div class="pillar-title" lang-si>ඒකීය</div>
+          <div class="pillar-title" lang-ta>ஏகன்</div>
+          <div class="pillar-desc" lang-si>ඔහුට හවුල්කරු නැත, දරුවන් නැත.</div>
+          <div class="pillar-desc" lang-ta>அவனுக்கு இணையில்லை, பிள்ளைகளில்லை.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">02</div>
+          <div class="pillar-title" lang-si>ස්වාධීන</div>
+          <div class="pillar-title" lang-ta>சுயாதீனன்</div>
+          <div class="pillar-desc" lang-si>සියල්ල ඔහු මත රඳා පවතී.</div>
+          <div class="pillar-desc" lang-ta>யாவும் அவனை நம்பியே உள்ளன.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">03</div>
+          <div class="pillar-title" lang-si>අසීමිත දැනුම</div>
+          <div class="pillar-title" lang-ta>எல்லாம் அறிந்தவன்</div>
+          <div class="pillar-desc" lang-si>ඔබේ සිතුවිලි පවා ඔහු දනියි.</div>
+          <div class="pillar-desc" lang-ta>உங்கள் எண்ணங்களையும் அறிவான்.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">04</div>
+          <div class="pillar-title" lang-si>අසීමිත දයාව</div>
+          <div class="pillar-title" lang-ta>எல்லையற்ற அருள்</div>
+          <div class="pillar-desc" lang-si>අල්-රහ්මාන්, අල්-රහීම් — දයාවෙන් පිරී ඇත.</div>
+          <div class="pillar-desc" lang-ta>அர்-ரஹ்மான், அர்-ரஹீம் — கருணையால் நிறைந்தவன்.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tawheed-right">
+      <div class="surah-arabic">
+        قُلْ هُوَ ٱللَّهُ أَحَدٌ ۝<br>
+        ٱللَّهُ ٱلصَّمَدُ ۝<br>
+        لَمْ يَلِدْ وَلَمْ يُولَدْ ۝<br>
+        وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌ
+      </div>
+      <div class="surah-translation" lang-si>"කියන්න: ඔහු අල්ලාහ්, ඒකීයයි. ඔහු කිසිවෙකු ජනිත නොකෙය, ජනිත වූයේ ද නැත. ඔහුට සමාන කිසිවෙක් නොමැත."</div>
+      <div class="surah-translation" lang-ta>"கூறுங்கள்: அவன் அல்லாஹ், ஒருவன். அவன் எவரையும் பெறவில்லை, எவராலும் பெறப்படவில்லை. அவனுக்கு நிகரானவர் எவரும் இல்லை."</div>
+      <div class="surah-ref">සූරා අල්-ඉඛ්ලාස් · சூரா அல்-இக்லாஸ் · 112</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SCIENCE ══ -->
+<section class="science" id="science">
+  <!-- Subtle wave divider -->
+  <svg style="position:absolute;top:0;left:0;right:0;width:100%;height:60px;opacity:0.06;" preserveAspectRatio="none" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C360,60 1080,0 1440,30 L1440,0 L0,0 Z" fill="#1C3A2A"/>
+  </svg>
+
+  <div class="science-header">
+    <div>
+      <div class="section-label" lang-si>කුර්ආනයේ විද්‍යාත්මක සංඥා</div>
+      <div class="section-label" lang-ta>குர்ஆனிலுள்ள அறிவியல் அத்தாட்சிகள்</div>
+      <h2 class="section-title" lang-si>වසර 1,400කට පෙර.<br><em>නූතන විද්‍යාව.</em></h2>
+      <h2 class="section-title" lang-ta>1,400 ஆண்டுகளுக்கு முன்.<br><em>நவீன அறிவியல்.</em></h2>
+    </div>
+    <p class="science-intro" lang-si>
+      කුර්ආනය විද්‍යාත්මක පෙළ පොතක් නොවේ. නමුත් නූතන විද්‍යාව සොයාගත් කරුණු, ඒවා සොයාගන්නට වසර සිය ගණනකට පෙර, ස්පෂ්ටව සඳහන් කර ඇත.
+    </p>
+    <p class="science-intro" lang-ta>
+      குர்ஆன் ஒரு அறிவியல் நூல் அல்ல. ஆனால் நவீன அறிவியல் கண்டுபிடித்தவற்றை, அந்த கண்டுபிடிப்புகளுக்கு நூற்றாண்டுகள் முன்பே தெளிவாக கூறியுள்ளது.
+    </p>
+  </div>
+
+  <div class="science-cards">
+    <!-- Card 1 -->
+    <div class="science-card">
+      <div class="science-card-accent"></div>
+      <div class="science-card-num">01</div>
+      <h3 lang-si>මානව භ්‍රෑණයේ අවධීන්</h3>
+      <h3 lang-ta>மனித கரு வளர்ச்சி நிலைகள்</h3>
+      <blockquote lang-si>"ශුක්‍රාණුව ලේ කැටියක් කළෙමු, ලේ කැටිය මස් කැටියක් කළෙමු, පසුව අස්ථි කළෙමු, අස්ථි මසින් ආවරණය කළෙමු."</blockquote>
+      <blockquote lang-ta>"விந்தை இரத்த கட்டியாக்கினோம், அதை சதைப் பிண்டமாக்கினோம், பிறகு எலும்புகளாக்கி, சதையால் போர்த்தினோம்."</blockquote>
+      <div class="science-ref">Al-Quran 23:12-14</div>
+      <p class="science-note" lang-si>1980 දී කැනේඩියාන මහාචාර්ය කීත් មූර් විසින් සත්‍යාපනය කරන ලදී.</p>
+      <p class="science-note" lang-ta>1980ல் கனடிய பேராசிரியர் கீத் மூர் இதை சத்தியப்படுத்தினார்.</p>
+    </div>
+    <!-- Card 2 -->
+    <div class="science-card">
+      <div class="science-card-accent"></div>
+      <div class="science-card-num">02</div>
+      <h3 lang-si>පුළුල් වන විශ්වය</h3>
+      <h3 lang-ta>விரியும் பிரபஞ்சம்</h3>
+      <blockquote lang-si>"අහස අපි ශක්තියෙන් ගොඩනැගුවෙමු, සහ අපි එය නිරන්තරයෙන් පුළුල් කරන්නෙමු."</blockquote>
+      <blockquote lang-ta>"வானத்தை நாம் வலிமையால் கட்டினோம், நாமே அதை விரிவாக்கிக் கொண்டிருக்கிறோம்."</blockquote>
+      <div class="science-ref">Al-Quran 51:47</div>
+      <p class="science-note" lang-si>1929 දී හබල් සොයාගත් — කුර්ආනය වසර 1,400කට පෙරින් ප්‍රකාශ කෙළේය.</p>
+      <p class="science-note" lang-ta>1929ல் ஹப்பல் கண்டுபிடித்தார் — குர்ஆன் 1,400 ஆண்டுகள் முன்பே சொன்னது.</p>
+    </div>
+    <!-- Card 3 -->
+    <div class="science-card">
+      <div class="science-card-accent"></div>
+      <div class="science-card-num">03</div>
+      <h3 lang-si>ගැඹුරු මුහුදේ අන්ධකාරය</h3>
+      <h3 lang-ta>ஆழ்கடலின் இருள்</h3>
+      <blockquote lang-si>"ගැඹුරු මුහුදේ අන්ධකාරයක්, එක මත එක තරංග ආවරණය කරයි... අන්ධකාරයක්, එක මත එක."</blockquote>
+      <blockquote lang-ta>"ஆழ்கடலில் இருள், அலைகள் மேல் அலைகள் மூடுகின்றன... இருள் மேல் இருள்."</blockquote>
+      <div class="science-ref">Al-Quran 24:40</div>
+      <p class="science-note" lang-si>200m ගැඹුරේ සම්පූර්ණ අන්ධකාරය — සබ්මැරීන සමඟ ගත් ශතවර්ෂයේ සොයාගත්තේය.</p>
+      <p class="science-note" lang-ta>200 மீட்டருக்கு கீழே முழு இருள் — கடந்த நூற்றாண்டில் நீர்மூழ்கி மூலம் கண்டறியப்பட்டது.</p>
+    </div>
+    <!-- Card 4 -->
+    <div class="science-card">
+      <div class="science-card-accent"></div>
+      <div class="science-card-num">04</div>
+      <h3 lang-si>කඳු — පෘථිවියේ ඇණ</h3>
+      <h3 lang-ta>மலைகள் — பூமியின் ஆணிகள்</h3>
+      <blockquote lang-si>"කඳු, පෘථිවියට ඇණ ලෙස අපි තැබුවේ නැද්ද? එමගින් එය නොසැලී පවතී."</blockquote>
+      <blockquote lang-ta>"மலைகளை ஆணிகளாக நாம் ஆக்கவில்லையா? அதனால் பூமி நிலையாக இருக்கின்றது."</blockquote>
+      <div class="science-ref">Al-Quran 78:7, 16:15</div>
+      <p class="science-note" lang-si>භූවිද්‍යාව: කඳුවලට ඇණ වැනි භූගත මූලයන් ඇත.</p>
+      <p class="science-note" lang-ta>புவியியல்: மலைகளுக்கு ஆணி போன்ற ஆழ்ந்த வேர்கள் உள்ளன.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROPHETS ══ -->
+<section class="prophets" id="prophets">
+  <div class="section-label" lang-si>එකම පණිවිඩය · සියලු කාලවල</div>
+  <div class="section-label" lang-ta>ஒரே செய்தி · எல்லா காலத்திலும்</div>
+  <h2 class="section-title" lang-si>අල්ලාහ්ගේ නබිවරු — <em>කවදත්, සියල්ලන්ට.</em></h2>
+  <h2 class="section-title" lang-ta>அல்லாஹ்வின் நபிமார்கள் — <em>எல்லா காலத்திலும், அனைவருக்கும்.</em></h2>
+  <p class="prophets-intro" lang-si>ඉස්ලාම් යනු නව ආගමක් නොවේ. ආදම් තුමන්ගේ සිට මුහම්මද් ﷺ දක්වා, මානව වර්ගයාට යැවූ අඛණ්ඩ සත්‍ය පණිවිඩයයි. සෑම නබිවරයෙක්ම ගෙනා එකම මූලික පණිවිඩය — "අල්ලාහ් හැර දෙවියෙක් නැත."</p>
+  <p class="prophets-intro" lang-ta>இஸ்லாம் புதிய மதமில்லை. ஆதம் (அலை) முதல் முஹம்மது ﷺ வரை, மனிதகுலத்திற்கு அனுப்பப்பட்ட தொடர்ச்சியான உண்மை செய்தி. ஒவ்வொரு நபியும் கொண்டுவந்த ஒரே அடிப்படை செய்தி — "அல்லாஹ்வைத் தவிர வேறு இறைவனில்லை."</p>
+
+  <div class="prophets-grid">
+    <div class="prophet-card">
+      <div class="prophet-arabic">آدم</div>
+      <div class="prophet-name" lang-si>ආදම්</div>
+      <div class="prophet-name" lang-ta>ஆதம் (அலை)</div>
+      <div class="prophet-en">Adam</div>
+      <div class="prophet-desc" lang-si>පළමු මනුෂ්‍යයා සහ පළමු නබි.</div>
+      <div class="prophet-desc" lang-ta>முதல் மனிதன் மற்றும் முதல் நபி.</div>
+    </div>
+    <div class="prophet-card">
+      <div class="prophet-arabic">نوح</div>
+      <div class="prophet-name" lang-si>නූහ්</div>
+      <div class="prophet-name" lang-ta>நூஹ் (அலை)</div>
+      <div class="prophet-en">Noah</div>
+      <div class="prophet-desc" lang-si>ජල ගැල්මෙන් මනුෂ්‍ය වර්ගයා බේරාගත් නබි.</div>
+      <div class="prophet-desc" lang-ta>வெள்ளத்திலிருந்து மனிதகுலத்தை காத்த நபி.</div>
+    </div>
+    <div class="prophet-card">
+      <div class="prophet-arabic">إبراهيم</div>
+      <div class="prophet-name" lang-si>ඉබ්‍රාහීම්</div>
+      <div class="prophet-name" lang-ta>இப்ராஹீம் (அலை)</div>
+      <div class="prophet-en">Abraham</div>
+      <div class="prophet-desc" lang-si>අල්ලාහ්ගේ මිතුරා ලෙස හැඳින්වූ නබි.</div>
+      <div class="prophet-desc" lang-ta>அல்லாஹ்வின் நெருங்கிய நண்பர் என்று அழைக்கப்பட்டவர்.</div>
+    </div>
+    <div class="prophet-card">
+      <div class="prophet-arabic">موسى</div>
+      <div class="prophet-name" lang-si>මූසා</div>
+      <div class="prophet-name" lang-ta>மூசா (அலை)</div>
+      <div class="prophet-en">Moses</div>
+      <div class="prophet-desc" lang-si>තව්රාත් ග්‍රන්ථය ලද නබි.</div>
+      <div class="prophet-desc" lang-ta>தவ்ராத் வேதம் பெற்ற நபி.</div>
+    </div>
+    <div class="prophet-card">
+      <div class="prophet-arabic">داود</div>
+      <div class="prophet-name" lang-si>දාවූද්</div>
+      <div class="prophet-name" lang-ta>தாவூத் (அலை)</div>
+      <div class="prophet-en">David</div>
+      <div class="prophet-desc" lang-si>සබූර් ග්‍රන්ථය ලද රජ සහ නබි.</div>
+      <div class="prophet-desc" lang-ta>ஜபூர் வேதம் பெற்ற அரசர் மற்றும் நபி.</div>
+    </div>
+    <div class="prophet-card">
+      <div class="prophet-arabic">عيسى</div>
+      <div class="prophet-name" lang-si>ඊසා</div>
+      <div class="prophet-name" lang-ta>ஈஸா (அலை)</div>
+      <div class="prophet-en">Jesus</div>
+      <div class="prophet-desc" lang-si>කුර්ආනයේ වාර 25ක් සඳහන් මහත් නබි.</div>
+      <div class="prophet-desc" lang-ta>குர்ஆனில் 25 முறை குறிப்பிடப்பட்ட மகத்தான நபி.</div>
+    </div>
+    <div class="prophet-card featured">
+      <div class="prophet-arabic">محمد</div>
+      <div class="prophet-name" lang-si>මුහම්මද් ﷺ</div>
+      <div class="prophet-name" lang-ta>முஹம்மது ﷺ</div>
+      <div class="prophet-en">Muhammad · Last Prophet</div>
+      <div class="prophet-desc" lang-si>අවසන් නබි. සියලු මානව වර්ගයාට යවන ලද — සියල්ලන් සඳහා කරුණාවක්.</div>
+      <div class="prophet-desc" lang-ta>இறுதி நபி. அனைத்து மனிதர்களுக்கும் அனுப்பப்பட்டவர் — அனைவருக்கும் அருளாளர்.</div>
+    </div>
+  </div>
+
+  <div class="prophets-verse">
+    <div class="prophets-verse-arabic">قُولُوا آمَنَّا بِاللَّهِ وَمَا أُنزِلَ إِلَيْنَا<br>وَمَا أُنزِلَ إِلَىٰ إِبْرَاهِيمَ وَإِسْمَاعِيلَ<br>وَمَا أُوتِيَ مُوسَىٰ وَعِيسَىٰ</div>
+    <div class="prophets-verse-text">
+      <p lang-si>"කියන්න: අපි අල්ලාහ්ව, ඉබ්‍රාහීම්, ඉස්මාඊල්, ඉස්හාක්, යාකූබ් සහ ඔවුන්ගේ ගෝත්‍රවලට, මූසා සහ ඊසාට ලබා දුන් දේ — සියල්ලටම විශ්වාස කරමු."</p>
+      <p lang-ta>"கூறுங்கள்: நாங்கள் அல்லாஹ்வையும், இப்ராஹீம், இஸ்மாயீல், மூசா மற்றும் ஈஸாவுக்கும் அருளப்பட்டதையும் நம்புகிறோம்."</p>
+      <div class="ref">Al-Quran 2:136</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PILLARS ══ -->
+<section class="pillars-section" id="pillars">
+  <!-- Decorative diagonal lines -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.03;pointer-events:none;" preserveAspectRatio="none" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="0" x2="800" y2="500" stroke="#1C3A2A" stroke-width="60"/>
+    <line x1="200" y1="0" x2="800" y2="375" stroke="#1C3A2A" stroke-width="40"/>
+    <line x1="-200" y1="0" x2="800" y2="625" stroke="#C4952A" stroke-width="20"/>
+  </svg>
+
+  <div class="section-label" lang-si>ඉස්ලාමයේ ජීවන මග</div>
+  <div class="section-label" lang-ta>இஸ்லாமிய வாழ்வு முறை</div>
+  <h2 class="section-title" lang-si>විශ්වාසය හදවතේ. <em>ක්‍රියාව ජීවිතයේ.</em></h2>
+  <h2 class="section-title" lang-ta>நம்பிக்கை இதயத்தில். <em>செயல் வாழ்வில்.</em></h2>
+
+  <p class="pillars-intro" lang-si>ඉස්ලාම් හුදෙක් විශ්වාසයක් නොවේ — සම්පූර්ණ ජීවන මගකි. දෙවියන් සමඟ ඔබේ සම්බන්ධතාවය සැකසෙන සිදුවීම් පහක්.</p>
+  <p class="pillars-intro" lang-ta>இஸ்லாம் வெறும் நம்பிக்கை மட்டுமில்லை — முழுமையான வாழ்வு முறை. இறைவனோடு உங்கள் உறவை நிறுவும் ஐந்து தூண்கள்.</p>
+
+  <div class="pillars-five">
+    <div class="pillar-box">
+      <div class="pillar-box-num">01</div>
+      <div class="pillar-box-title" lang-si>ෂහාදා</div>
+      <div class="pillar-box-title" lang-ta>சஹாதா</div>
+      <div class="pillar-box-desc" lang-si>"අල්ලාහ් හැර දෙවියෙක් නැත, මුහම්මද් ﷺ නබිය" — විශ්වාසය ආරම්භ වෙයි.</div>
+      <div class="pillar-box-desc" lang-ta>"அல்லாஹ்வைத் தவிர இறைவனில்லை, முஹம்மது ﷺ தூதர்" — நம்பிக்கை ஆரம்பிக்கிறது.</div>
+    </div>
+    <div class="pillar-box">
+      <div class="pillar-box-num">02</div>
+      <div class="pillar-box-title" lang-si>සලාහ්</div>
+      <div class="pillar-box-title" lang-ta>சலாத்</div>
+      <div class="pillar-box-desc" lang-si>දිනකට පස්වරක් නැමදුම. සෘජු සම්බන්ධතාවය — මැදිහත්කරුවන් නැත.</div>
+      <div class="pillar-box-desc" lang-ta>தினமும் ஐந்து வேளை தொழுகை. நேரடி தொடர்பு — மத்தியஸ்தர் இல்லை.</div>
+    </div>
+    <div class="pillar-box">
+      <div class="pillar-box-num">03</div>
+      <div class="pillar-box-title" lang-si>සකාත්</div>
+      <div class="pillar-box-title" lang-ta>ஸகாத்</div>
+      <div class="pillar-box-desc" lang-si>ධනවතුන් දුප්පතුන්ට වසරකට 2.5%. යුතුකමකි, ඉල්ලීමක් නොවේ.</div>
+      <div class="pillar-box-desc" lang-ta>பணக்காரர்கள் ஏழைகளுக்கு வருடம் 2.5% கொடுப்பது. கடமை, விருப்பமில்லை.</div>
+    </div>
+    <div class="pillar-box">
+      <div class="pillar-box-num">04</div>
+      <div class="pillar-box-title" lang-si>සව්ම්</div>
+      <div class="pillar-box-title" lang-ta>சவ்ம்</div>
+      <div class="pillar-box-desc" lang-si>රමදාන් මාසයේ උපවාසය. ආත්ම පාලනය, දෙවියන් මතක් කිරීම.</div>
+      <div class="pillar-box-desc" lang-ta>ரமழான் மாதம் நோன்பு. ஆத்ம கட்டுப்பாடு, இறைவனை நினைவுகூரல்.</div>
+    </div>
+    <div class="pillar-box">
+      <div class="pillar-box-num">05</div>
+      <div class="pillar-box-title" lang-si>හජ්</div>
+      <div class="pillar-box-title" lang-ta>ஹஜ்</div>
+      <div class="pillar-box-desc" lang-si>ජීවිතයේ වරක් මක්කා වන්දනා — සියලු වර්ගවල සම සමානත්වය.</div>
+      <div class="pillar-box-desc" lang-ta>வாழ்வில் ஒரு முறை மக்கா திருப்பயணம் — அனைத்து இனங்களும் சமம்.</div>
+    </div>
+  </div>
+
+  <div class="ethics-grid">
+    <div class="ethic-card">
+      <div class="ethic-title" lang-si>මාපියන්ට ගරු කිරීම</div>
+      <div class="ethic-title" lang-ta>பெற்றோரை மதித்தல்</div>
+      <div class="ethic-quote" lang-si>"ඔහු හැර කිසිවෙකුට නැමදීම නොකරන ලෙසත්, මාපියන්ට කරුණාව පෙන්වන ලෙසත්." — 17:23</div>
+      <div class="ethic-quote" lang-ta>"அவனைத் தவிர வேறு யாரையும் வணங்காதே, பெற்றோரிடம் அன்போடிரு." — 17:23</div>
+    </div>
+    <div class="ethic-card">
+      <div class="ethic-title" lang-si>අසල්වැසියන්ට කරුණාව</div>
+      <div class="ethic-title" lang-ta>அண்டை வீட்டாரிடம் அன்பு</div>
+      <div class="ethic-quote" lang-si>"ඔහු අසල්වැසියා කුසගිනිව සිටිය දී, සෑහෙන සේ කාන මිනිසා, විශ්වාසී නොවේ." — නබි ﷺ</div>
+      <div class="ethic-quote" lang-ta>"அண்டை வீட்டார் பசியோடிருக்கும்போது தான் திருப்தியாக உண்பவன் மோமின் அல்ல." — நபி ﷺ</div>
+    </div>
+    <div class="ethic-card">
+      <div class="ethic-title" lang-si>ලෝකයටම යුක්තිය</div>
+      <div class="ethic-title" lang-ta>உலகிற்கே நீதி</div>
+      <div class="ethic-quote" lang-si>"ඔබ ඔබටම, හෝ ඕනෑ කෙනෙකුට විරුද්ධව වුවද, යුක්තිය ස්ථාපිත කරන්නන් වන්න." — 4:135</div>
+      <div class="ethic-quote" lang-ta>"உங்களுக்கே எதிராக ஆனாலும் நீதி நிலைநாட்டுவோராக இருங்கள்." — 4:135</div>
+    </div>
+    <div class="ethic-card">
+      <div class="ethic-title" lang-si>සතුන්ට පවා දයාව</div>
+      <div class="ethic-title" lang-ta>விலங்குகளிடமும் கருணை</div>
+      <div class="ethic-quote" lang-si>"සෑම ජීවී සත්වයෙකුට කරුණාවක් කිරීමේ දී ඔබට ප්‍රතිඵලයක් ඇත." — නබි ﷺ</div>
+      <div class="ethic-quote" lang-ta>"ஒவ்வொரு உயிரினத்திடமும் கருணை காட்டுவதில் உங்களுக்கு நற்பலன் உண்டு." — நபி ﷺ</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="faq" id="faq">
+  <div class="section-label" lang-si>ඉස්ලාම් පිළිබඳ සාමාන්‍ය ප්‍රශ්න</div>
+  <div class="section-label" lang-ta>இஸ்லாம் பற்றி பொதுவான கேள்விகள்</div>
+  <h2 class="section-title" lang-si>අසන දේටම, <em>අවංක පිළිතුරු.</em></h2>
+  <h2 class="section-title" lang-ta>கேட்பதற்கே, <em>நேர்மையான பதில்கள்.</em></h2>
+
+  <div class="faq-list">
+
+    <div class="faq-item open">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <div><span class="faq-q-si" lang-si>01 &nbsp; ඉස්ලාම් කියන්නේ ත්‍රස්ත්‍රතවාදයද?</span><span class="faq-q-ta" lang-ta>01 &nbsp; இஸ்லாம் என்பது தீவிரவாதமா?</span></div>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer" lang-si>කොහෙත්ම නැත. කුර්ආනය කියනවා: "කවෙකු නිර්දෝෂ පුද්ගලයෙකු මරා දැමුවද, ඔහු මුළු මනව වර්ගම මරා දැමුවාක් මෙනි." (5:32) ලොව මුස්ලිම්වරුන් බිලියන 2කට වැඩිවූ අතර, 99.9%ක් සාමකාමීව ජීවත් වෙති.</div>
+      <div class="faq-answer" lang-ta>கேள்விக்கே இடமில்லை. குர்ஆன் கூறுகிறது: "எவரேனும் ஒரு நிரபராதியை கொன்றால், அவன் மனிதகுலம் முழுவதையும் கொன்றதற்கு சமம்." (5:32) உலகில் 200 கோடி முஸ்லிம்களில் 99.9% சமாதானமாக வாழ்கின்றனர்.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <div><span class="faq-q-si" lang-si>02 &nbsp; මුස්ලිම් කාන්තාවන් පීඩාවට පත්ව ඇත්ද?</span><span class="faq-q-ta" lang-ta>02 &nbsp; முஸ்லிம் பெண்கள் ஒடுக்கப்படுகிறார்களா?</span></div>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer" lang-si>ඉස්ලාම් කාන්තාවට ගරු සහ අයිතිවාසිකම් ලබා දෙයි. කුර්ආනය ප්‍රකාශ කරන්නේ කාන්තාවන් සහ පිරිමි අල්ලාහ් ඉදිරියේ සමාන බවයි. ලෝකයේ බොහෝ ශිෂ්‍යාවන්, ව්‍යාපාරිකයන් ගෞරවනීය ලෙස හිජාබ් ධරිති.</div>
+      <div class="faq-answer" lang-ta>இஸ்லாம் பெண்களுக்கு மரியாதையும் உரிமைகளும் வழங்குகிறது. குர்ஆன் கூறுகிறது: பெண்களும் ஆண்களும் அல்லாஹ்வின் முன் சமம். உலகெங்கும் பல படித்தவர்கள், வியாபாரிகள் கண்ணியமாக ஹிஜாப் அணிகிறார்கள்.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <div><span class="faq-q-si" lang-si>03 &nbsp; ඉස්ලාම් යේසුස් වහන්සේට ගරු කරනවාද?</span><span class="faq-q-ta" lang-ta>03 &nbsp; இஸ்லாம் இயேசுவை மதிக்கிறதா?</span></div>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer" lang-si>ඔව්! ඊසා (යේසුස්) ඉස්ලාමයේ ගෞරවනීය නබිවරයෙකි. කුර්ආනයේ වාර 25ක් සඳහන් වේ. වෙනස නම් ඔහු ශ්‍රේෂ්ඨ නබිවරයෙකු ලෙස පිළිගැනීමයි, දෙවිකමනස ලෙස නොවේ.</div>
+      <div class="faq-answer" lang-ta>ஆம்! ஈஸா (இயேசு) இஸ்லாமில் மதிக்கப்படும் நபி. குர்ஆனில் 25 முறை குறிப்பிடப்படுகிறார். வேறுபாடு என்னவெனில், அவரை இறைவனாக அல்ல, மகத்தான நபியாக ஏற்றுக்கொள்வது.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <div><span class="faq-q-si" lang-si>04 &nbsp; "අල්ලාහ්" සහ "දෙවියන්" — එකද?</span><span class="faq-q-ta" lang-ta>04 &nbsp; "அல்லாஹ்" மற்றும் "கடவுள்" — ஒன்றா?</span></div>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer" lang-si>ඔව්. "අල්ලාහ්" යනු "The God" — දෙවිදූ — යන අරාබි වචනයයි. ක්‍රිස්තියානි සහ යුදෙව් අරාබිවරු ද "අල්ලාහ්" යන වචනය ඔවුන්ගේ ප්‍රාර්ථනාවල භාවිත කරති.</div>
+      <div class="faq-answer" lang-ta>ஆம். "அல்லாஹ்" என்பது "The God" என்பதற்கான அரபு வார்த்தை. கிறிஸ்தவ மற்றும் யூத அரபியர்களும் தங்கள் வழிபாட்டில் "அல்லாஹ்" என்ற வார்த்தையை பயன்படுத்துகிறார்கள்.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <div><span class="faq-q-si" lang-si>05 &nbsp; ඉස්ලාම් වෙනත් ආගම්වලට පහර දේද?</span><span class="faq-q-ta" lang-ta>05 &nbsp; இஸ்லாம் மற்ற மதங்களை தாக்குகிறதா?</span></div>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer" lang-si>නොවේ. "ආගමේ බල කිරීමක් නොමැත" (2:256). ඉස්ලාමී ඉතිහාසය පුරා ක්‍රිස්තියානීන්, යුදෙව්, හින්දූ ශාන්තිව ජීවත් වූහ.</div>
+      <div class="faq-answer" lang-ta>இல்லை. "மார்க்கத்தில் கட்டாயம் இல்லை" (2:256). இஸ்லாமிய வரலாற்றில் கிறிஸ்தவர்கள், யூதர்கள், இந்துக்கள் சமாதானமாக வாழ்ந்தனர்.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <div><span class="faq-q-si" lang-si>06 &nbsp; කුර්ආනය වෙනස් වී ඇද්ද?</span><span class="faq-q-ta" lang-ta>06 &nbsp; குர்ஆன் மாற்றப்பட்டதா?</span></div>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer" lang-si>නොවේ. ලක්ෂ ගණනක් හාෆිස් (කටපාඩම් කළ) ජීවත් ව ඇත. ලෝකයේ සෑම කෙළවරකාවල ඇති කුර්ආනය වෙනස් නොවේ.</div>
+      <div class="faq-answer" lang-ta>இல்லை. லட்சக்கணக்கான ஹாஃபிழ்கள் (மனப்பாடம் செய்தவர்கள்) வாழ்ந்துள்ளனர். உலகில் எங்கும் உள்ள குர்ஆன் மாறாமல் உள்ளது.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="testimonials" id="stories">
+  <!-- Background geometric pattern -->
+  <svg class="testimonials-pattern" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="stars" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+        <polygon points="60,5 72,45 115,45 80,70 93,110 60,85 27,110 40,70 5,45 48,45" fill="#C4952A"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#stars)"/>
+  </svg>
+
+  <div class="section-label" lang-si>සොයන්නන්ගේ වදන්</div>
+  <div class="section-label" lang-ta>தேடுபவர்களின் வார்த்தைகள்</div>
+  <h2 class="section-title" lang-si>ඉස්ලාම් වෙත <em>ආකර්ෂණය වූයේ.</em></h2>
+  <h2 class="section-title" lang-ta>இஸ்லாமின் பக்கம் <em>ஈர்க்கப்பட்டவர்கள்.</em></h2>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-body" lang-si>කුර්ආනයේ සඳහන් මානව භ්‍රෑණයේ අවධීන් ගැන කියවූ විට. මගේ විද්‍යාත්මක මනස නිහඬ වූයේ එතැන දී.</div>
+      <div class="testimonial-body" lang-ta>குர்ஆனில் மனித கரு வளர்ச்சியை படித்தபோது. என் அறிவியல் மனம் அங்கேயே அமைதியானது.</div>
+      <div class="testimonial-attr">— A. කොළඹ / கொழும்பு</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-body" lang-si>"ආගමේ බල කිරීමක් නොමැත" යන වදන. මට ආදරය කළ දෙවියන් මාව තෝරාගන්නට ඉඩ දුන්නේය.</div>
+      <div class="testimonial-body" lang-ta>"மார்க்கத்தில் கட்டாயம் இல்லை" என்ற வார்த்தை. என்னை நேசிக்கும் இறைவன் என்னை தேர்ந்தெடுக்க அனுமதித்தான்.</div>
+      <div class="testimonial-attr">— M. මහනුවර / மட்டக்களப்பு</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-body" lang-si>ලොව සියලු මිනිසුන් එක ආදම්ගේ දරුවන් — ජාතිය, වර්ණය, භාෂාව ඉස්ලාමයේ වෙනසක් කරන්නේ නැහැ.</div>
+      <div class="testimonial-body" lang-ta>உலகின் அனைவரும் ஒரே ஆதமின் பிள்ளைகள் — இனம், நிறம், மொழி இஸ்லாமில் வித்தியாசம் செய்வதில்லை.</div>
+      <div class="testimonial-attr">— S. ගාල්ල / யாழ்ப்பாணம்</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section class="contact" id="contact">
+  <div class="section-label" lang-si>ඔබේ දෑත අල්ලාගෙන</div>
+  <div class="section-label" lang-ta>உங்கள் கைகளை பிடித்து</div>
+  <h2 class="section-title" lang-si>ඔබේ ප්‍රශ්නය <em>අප වෙත එවන්න.</em></h2>
+  <h2 class="section-title" lang-ta>உங்கள் கேள்வியை <em>எங்களுக்கு அனுப்புங்கள்.</em></h2>
+  <p class="contact-subtitle" lang-si>කිසිම බල කිරීමක් නැහැ. ඔබේ නම සහ ප්‍රශ්නය එවන්න — කිසිම බල කිරීමකින් තොරව අපි ඔබ වෙත සම්බන්ධ වෙමු.</p>
+  <p class="contact-subtitle" lang-ta>எந்த கட்டாயமும் இல்லை. உங்கள் பெயரும் கேள்வியும் அனுப்புங்கள் — நாங்கள் கட்டாயமில்லாமல் பதில் அளிப்போம்.</p>
+
+  <div class="form-wrap">
+    <div id="form-box">
+      <div class="form-group">
+        <label class="form-label" lang-si>ඔබේ නම</label>
+        <label class="form-label" lang-ta>உங்கள் பெயர்</label>
+        <input class="form-input" type="text" id="fname" placeholder="ඔබේ නම / உங்கள் பெயர்..." />
+      </div>
+      <div class="form-group">
+        <label class="form-label" lang-si>දුරකථන අංකය හෝ ඉමේල් (විකල්ප)</label>
+        <label class="form-label" lang-ta>தொலைபேசி எண் அல்லது மின்னஞ்சல் (விருப்பம்)</label>
+        <input class="form-input" type="text" id="fcontact" placeholder="WhatsApp / Email..." />
+      </div>
+      <div class="form-group">
+        <label class="form-label" lang-si>ඔබේ ප්‍රශ්නය හෝ සටහන</label>
+        <label class="form-label" lang-ta>உங்கள் கேள்வி அல்லது குறிப்பு</label>
+        <textarea class="form-textarea" id="fmsg" rows="5" placeholder="ඉස්ලාම් ගැන දැනගැනීමට... / இஸ்லாம் பற்றி அறிய..."></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label" lang-si>ඔබ කැමති ප්‍රතිචාර ආකාරය</label>
+        <label class="form-label" lang-ta>விரும்பும் பதில் முறை</label>
+        <div class="radio-group">
+          <label class="radio-label" lang-si><input type="radio" name="pref" value="wa" checked /> WhatsApp</label>
+          <label class="radio-label" lang-si><input type="radio" name="pref" value="email" /> ඉමේල්</label>
+          <label class="radio-label" lang-si><input type="radio" name="pref" value="call" /> දුරකථනය</label>
+          <label class="radio-label" lang-si><input type="radio" name="pref" value="none" /> අනවශ්‍ය</label>
+          <label class="radio-label" lang-ta><input type="radio" name="pref2" value="wa" checked /> வாட்சாப்</label>
+          <label class="radio-label" lang-ta><input type="radio" name="pref2" value="email" /> மின்னஞ்சல்</label>
+          <label class="radio-label" lang-ta><input type="radio" name="pref2" value="call" /> தொலைபேசி</label>
+          <label class="radio-label" lang-ta><input type="radio" name="pref2" value="none" /> தேவையில்லை</label>
+        </div>
+      </div>
+      <button class="btn-submit" lang-si onclick="submitForm()">ප්‍රශ්නය එවන්න →</button>
+      <button class="btn-submit" lang-ta onclick="submitForm()">கேள்வியை அனுப்பு →</button>
+    </div>
+
+    <div class="form-success" id="form-success">
+      <div class="success-check">✓</div>
+      <h3 lang-si>ස්තූතියි!</h3>
+      <h3 lang-ta>நன்றி!</h3>
+      <p lang-si>ඔබේ ප්‍රශ්නය ලැබිණ. අපි ඉක්මනින් ඔබ වෙත සම්බන්ධ වෙමු. ආගමේ බල කිරීමක් නොමැත — ඔබේ කාලයෙන්, ඔබේ ආකාරයෙන් සොයා බලන්න.</p>
+      <p lang-ta>உங்கள் கேள்வி கிடைத்தது. நாங்கள் விரைவில் தொடர்பு கொள்வோம். கட்டாயமில்லை — உங்கள் நேரத்தில், உங்கள் விதத்தில் தேடுங்கள்.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="nav-logo" style="text-decoration:none;">
+        <div class="nav-logo-emblem">
+          <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 3C8.477 3 4 7.477 4 13c0 5.523 4.477 10 10 10 1.2 0 2.35-.21 3.42-.6C13.6 20.9 11 17.24 11 13c0-4.24 2.6-7.9 6.42-9.4A9.93 9.93 0 0014 3z"/>
+            <circle cx="21" cy="8" r="2"/>
+          </svg>
+        </div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-si">සත්‍යය</span>
+          <span class="nav-logo-ta">உண்மை</span>
+          <span class="nav-logo-sub">SRI LANKA · DA'WAH</span>
+        </div>
+      </div>
+      <p class="footer-brand-desc" lang-si>ශ්‍රී ලංකාවේ සිංහල සහ දමිළ කතා කරන සහෝදර සහෝදරියන්ට ඉස්ලාම් ගැන ආරාධනයක්. නොමිලේ. බලකිරීමක් නැතිව.</p>
+      <p class="footer-brand-desc" lang-ta>இலங்கையில் சிங்களம் மற்றும் தமிழ் பேசும் சகோதர சகோதரிகளுக்கு இஸ்லாம் பற்றிய அழைப்பு. இலவசம். கட்டாயமில்லை.</p>
+    </div>
+    <div class="footer-col">
+      <h4>EXPLORE</h4>
+      <a href="#tawheed" lang-si>මැවුම්කරු</a>
+      <a href="#tawheed" lang-ta>படைத்தவன்</a>
+      <a href="#science" lang-si>කුර්ආනයේ සංඥා</a>
+      <a href="#science" lang-ta>குர்ஆன் அத்தாட்சிகள்</a>
+      <a href="#prophets" lang-si>නබිවරු</a>
+      <a href="#prophets" lang-ta>நபிமார்கள்</a>
+      <a href="#pillars" lang-si>ජීවන මග</a>
+      <a href="#pillars" lang-ta>வாழ்வு முறை</a>
+    </div>
+    <div class="footer-col">
+      <h4>RESOURCES</h4>
+      <a href="#" lang-si>සිංහල කුර්ආනය</a>
+      <a href="#" lang-ta>தமிழ் குர்ஆன்</a>
+      <a href="#" lang-si>නොමිලේ පොත්</a>
+      <a href="#" lang-ta>இலவச புத்தகங்கள்</a>
+      <a href="#" lang-si>ශබ්ද හා වීඩියෝ</a>
+      <a href="#" lang-ta>ஆடியோ & வீடியோ</a>
+    </div>
+    <div class="footer-col">
+      <h4>CONNECT</h4>
+      <a href="#contact" lang-si>ප්‍රශ්නය එවන්න</a>
+      <a href="#contact" lang-ta>கேள்வி அனுப்பு</a>
+      <a href="#" lang-si>WhatsApp</a>
+      <a href="#" lang-ta>வாட்சாப்</a>
+      <a href="#" lang-si>ඔබ අසල පල්ලිය</a>
+      <a href="#" lang-ta>அருகில் மசூதி</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>
+      <span lang-si>© 2026 සත්‍යය. දෙවියන්ගේ නාමයෙන්.</span>
+      <span lang-ta>© 2026 உண்மை. இறைவன் நாமத்தில்.</span>
+    </div>
+    <span class="footer-bottom-right">ශ්‍රී ලංකාව · இலங்கை</span>
+  </div>
+</footer>
+
+<script>
+  /* ── LANGUAGE TOGGLE ── */
+  function setLang(lang) {
+    document.body.classList.toggle('lang-ta', lang === 'ta');
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.lang-btn:${lang === 'si' ? 'first-child' : 'last-child'}`).classList.add('active');
+    document.documentElement.lang = lang;
+    localStorage.setItem('sathyaya-lang', lang);
+  }
+
+  /* Restore saved preference */
+  const saved = localStorage.getItem('sathyaya-lang');
+  if (saved === 'ta') setLang('ta');
+
+  /* ── FAQ ── */
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* ── SMOOTH SCROLL ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  /* ── FORM ── */
+  function submitForm() {
+    const name = document.getElementById('fname').value.trim();
+    const msg  = document.getElementById('fmsg').value.trim();
+    const err  = el => { el.style.borderColor='#C4522A'; el.focus(); setTimeout(()=> el.style.borderColor='', 1800); };
+    if (!name) { err(document.getElementById('fname')); return; }
+    if (!msg)  { err(document.getElementById('fmsg'));  return; }
+    document.getElementById('form-box').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+</script>
+</body>
+</html>
