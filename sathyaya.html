@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>සත්‍යය · Sri Lanka Da'wah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Sinhala:wght@300;400;600;700;900&family=Noto+Sans+Sinhala:wght@300;400;600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --warm-white: #FAF7F2;
+    --gold: #C4952A;
+    --gold-light: #E8B84B;
+    --dark-green: #1C3A2A;
+    --deep-green: #0F2018;
+    --mid-green: #2A5240;
+    --text-dark: #1A1A1A;
+    --text-medium: #4A4A4A;
+    --text-light: #7A7A6A;
+    --border: rgba(196,149,42,0.2);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans Sinhala', sans-serif; background: var(--cream); color: var(--text-dark); overflow-x: hidden; }
+  .arabic { font-family: 'Amiri', serif; direction: rtl; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(245,240,232,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; gap: 2rem; height: 64px; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--dark-green); flex-shrink: 0; }
+  .nav-logo-icon { width: 40px; height: 40px; background: var(--dark-green); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Amiri', serif; font-size: 1.4rem; color: var(--gold); }
+  .nav-logo-text { font-family: 'Noto Serif Sinhala', serif; font-weight: 700; font-size: 1rem; line-height: 1.1; }
+  .nav-logo-sub { font-size: 0.65rem; color: var(--gold); letter-spacing: 0.1em; font-weight: 400; font-family: sans-serif; }
+  .nav-links { display: flex; gap: 0; list-style: none; flex: 1; }
+  .nav-links a { text-decoration: none; color: var(--text-medium); font-size: 0.82rem; padding: 0.4rem 0.8rem; border-radius: 4px; transition: all 0.2s; font-family: 'Noto Sans Sinhala', sans-serif; }
+  .nav-links a:hover { color: var(--dark-green); background: rgba(28,58,42,0.06); }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 4rem 4rem; position: relative; overflow: hidden; }
+  .hero-bg-arabic { position: absolute; right: -2rem; top: 50%; transform: translateY(-50%); font-family: 'Amiri', serif; font-size: 28rem; color: rgba(28,58,42,0.04); line-height: 1; user-select: none; pointer-events: none; }
+  .hero-label { font-size: 0.8rem; color: var(--text-light); letter-spacing: 0.05em; margin-bottom: 1.5rem; }
+  .hero h1 { font-family: 'Noto Serif Sinhala', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 700; line-height: 1.2; color: var(--dark-green); max-width: 700px; margin-bottom: 1.5rem; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-subtitle { font-size: 1rem; color: var(--text-medium); max-width: 520px; line-height: 1.8; margin-bottom: 2.5rem; }
+  .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--dark-green); color: var(--cream); padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; transition: all 0.2s; }
+  .btn-primary:hover { background: var(--mid-green); transform: translateY(-1px); }
+  .btn-outline { border: 1.5px solid var(--dark-green); color: var(--dark-green); padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; transition: all 0.2s; }
+  .btn-outline:hover { background: rgba(28,58,42,0.06); }
+  .hero-verse { margin-top: 5rem; padding-top: 3rem; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
+  .hero-verse-arabic { font-family: 'Amiri', serif; font-size: 2.2rem; color: var(--dark-green); direction: rtl; line-height: 1.6; }
+  .hero-verse-text { font-family: 'Noto Serif Sinhala', serif; font-size: 1.1rem; color: var(--text-medium); max-width: 380px; line-height: 1.8; }
+  .hero-verse-ref { font-size: 0.75rem; color: var(--gold); margin-top: 0.4rem; letter-spacing: 0.05em; }
+  section { padding: 5rem 4rem; }
+  .section-label { font-size: 0.72rem; letter-spacing: 0.12em; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; font-family: sans-serif; }
+  .section-title { font-family: 'Noto Serif Sinhala', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--dark-green); line-height: 1.25; margin-bottom: 1rem; }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .tawheed { background: var(--deep-green); color: var(--cream); position: relative; overflow: hidden; }
+  .tawheed .section-title { color: var(--cream); }
+  .tawheed-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+  .tawheed-left p { color: rgba(245,240,232,0.75); line-height: 1.9; font-size: 0.95rem; margin-bottom: 2rem; }
+  .tawheed-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+  .pillar { border-top: 1px solid rgba(196,149,42,0.4); padding-top: 1rem; }
+  .pillar-num { font-size: 0.7rem; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 0.4rem; font-family: sans-serif; }
+  .pillar-title { font-family: 'Noto Serif Sinhala', serif; font-size: 1.05rem; font-weight: 600; color: var(--cream); margin-bottom: 0.4rem; }
+  .pillar-desc { font-size: 0.82rem; color: rgba(245,240,232,0.6); line-height: 1.6; }
+  .tawheed-right { background: rgba(255,255,255,0.04); border: 1px solid rgba(196,149,42,0.2); border-radius: 12px; padding: 2.5rem; text-align: right; }
+  .tawheed-surah-arabic { font-family: 'Amiri', serif; font-size: 1.8rem; color: var(--gold-light); line-height: 2; direction: rtl; margin-bottom: 2rem; }
+  .tawheed-surah-text { font-family: 'Noto Serif Sinhala', serif; font-size: 0.95rem; color: rgba(245,240,232,0.85); line-height: 1.9; text-align: left; border-left: 2px solid var(--gold); padding-left: 1.2rem; }
+  .tawheed-surah-ref { font-size: 0.72rem; color: var(--gold); margin-top: 0.6rem; letter-spacing: 0.05em; text-align: left; }
+  .science { background: var(--warm-white); }
+  .science-intro { max-width: 580px; color: var(--text-medium); line-height: 1.9; font-size: 0.95rem; margin: 1rem 0 3rem; }
+  .science-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .science-card { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; position: relative; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+  .science-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(28,58,42,0.1); }
+  .science-card-num { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 3rem; font-weight: 800; color: rgba(28,58,42,0.05); line-height: 1; }
+  .science-card h3 { font-family: 'Noto Serif Sinhala', serif; font-size: 1rem; font-weight: 700; color: var(--dark-green); margin-bottom: 1rem; }
+  .science-card blockquote { font-family: 'Noto Serif Sinhala', serif; font-size: 0.85rem; color: var(--text-medium); line-height: 1.8; border-left: 2px solid var(--gold); padding-left: 0.8rem; margin-bottom: 1rem; font-style: italic; }
+  .science-card-ref { font-size: 0.72rem; color: var(--gold); letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+  .science-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.7; }
+  .prophets { background: var(--cream); }
+  .prophets-subtitle { color: var(--text-medium); line-height: 1.9; font-size: 0.95rem; max-width: 660px; margin: 1rem 0 3rem; }
+  .prophets-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1px; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 3rem; }
+  .prophet-card { background: var(--warm-white); padding: 1.5rem; border-right: 1px solid var(--border); transition: background 0.2s; }
+  .prophet-card:hover { background: var(--cream); }
+  .prophet-arabic { font-family: 'Amiri', serif; font-size: 1.6rem; color: var(--gold); direction: rtl; margin-bottom: 0.5rem; }
+  .prophet-name { font-family: 'Noto Serif Sinhala', serif; font-weight: 700; font-size: 0.95rem; color: var(--dark-green); margin-bottom: 0.3rem; }
+  .prophet-name-en { font-size: 0.72rem; color: var(--text-light); margin-bottom: 0.7rem; font-family: sans-serif; }
+  .prophet-desc { font-size: 0.8rem; color: var(--text-medium); line-height: 1.6; }
+  .prophets-verse-box { background: var(--dark-green); border-radius: 10px; padding: 2.5rem; color: var(--cream); display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; }
+  .prophets-verse-arabic { font-family: 'Amiri', serif; font-size: 1.2rem; direction: rtl; line-height: 2; color: var(--gold-light); flex: 1; min-width: 200px; }
+  .prophets-verse-text { flex: 2; min-width: 260px; }
+  .prophets-verse-text p { font-family: 'Noto Serif Sinhala', serif; font-size: 0.95rem; line-height: 1.9; color: rgba(245,240,232,0.9); }
+  .prophets-verse-text .ref { font-size: 0.72rem; color: var(--gold); margin-top: 0.8rem; letter-spacing: 0.05em; }
+  .pillars-section { background: var(--warm-white); }
+  .pillars-intro { color: var(--text-medium); line-height: 1.9; font-size: 0.95rem; max-width: 580px; margin: 1rem 0 3rem; }
+  .pillars-five { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 3rem; }
+  .pillar-box { background: var(--cream); padding: 1.8rem 1.4rem; display: flex; flex-direction: column; align-items: flex-start; transition: background 0.25s, color 0.25s; cursor: default; }
+  .pillar-box:hover { background: var(--dark-green); }
+  .pillar-box-num { font-size: 0.7rem; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 0.8rem; font-family: sans-serif; }
+  .pillar-box-title { font-family: 'Noto Serif Sinhala', serif; font-weight: 700; font-size: 1.1rem; color: var(--dark-green); margin-bottom: 0.7rem; transition: color 0.25s; }
+  .pillar-box:hover .pillar-box-title { color: var(--cream); }
+  .pillar-box-desc { font-size: 0.8rem; color: var(--text-medium); line-height: 1.7; transition: color 0.25s; }
+  .pillar-box:hover .pillar-box-desc { color: rgba(245,240,232,0.7); }
+  .ethics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+  .ethic-card { padding: 1.5rem; border-top: 2px solid var(--gold); }
+  .ethic-title { font-family: 'Noto Serif Sinhala', serif; font-weight: 700; font-size: 0.95rem; color: var(--dark-green); margin-bottom: 0.8rem; }
+  .ethic-quote { font-size: 0.82rem; color: var(--text-medium); line-height: 1.8; font-style: italic; font-family: 'Noto Serif Sinhala', serif; }
+  .faq { background: var(--cream); }
+  .faq-list { max-width: 760px; margin-top: 2.5rem; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-question { width: 100%; text-align: left; padding: 1.3rem 0; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; font-family: 'Noto Serif Sinhala', serif; font-size: 0.95rem; font-weight: 600; color: var(--dark-green); }
+  .faq-icon { width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; color: var(--text-light); transition: all 0.2s; }
+  .faq-item.open .faq-icon { background: var(--dark-green); border-color: var(--dark-green); color: var(--cream); transform: rotate(45deg); }
+  .faq-answer { display: none; padding-bottom: 1.3rem; font-size: 0.88rem; color: var(--text-medium); line-height: 1.9; max-width: 620px; }
+  .faq-item.open .faq-answer { display: block; }
+  .testimonials { background: var(--dark-green); }
+  .testimonials .section-title { color: var(--cream); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+  .testimonial-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(196,149,42,0.15); border-radius: 10px; padding: 2rem; }
+  .testimonial-quote { font-family: 'Noto Serif Sinhala', serif; font-size: 0.9rem; color: rgba(245,240,232,0.85); line-height: 1.9; margin-bottom: 1.2rem; padding-left: 1.5rem; position: relative; }
+  .testimonial-quote::before { content: '\201C'; font-family: 'Amiri', serif; font-size: 3rem; color: var(--gold); opacity: 0.4; position: absolute; top: -0.5rem; left: -0.3rem; line-height: 1; }
+  .testimonial-attr { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.05em; }
+  .cta { background: var(--deep-green); color: var(--cream); text-align: center; }
+  .cta .section-title { color: var(--cream); }
+  .cta-subtitle { color: rgba(245,240,232,0.7); max-width: 480px; margin: 1rem auto 2.5rem; line-height: 1.9; font-size: 0.95rem; }
+  .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+  .btn-gold { background: var(--gold); color: var(--deep-green); padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-outline-light { border: 1.5px solid rgba(245,240,232,0.3); color: var(--cream); padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; font-size: 0.9rem; transition: all 0.2s; }
+  .btn-outline-light:hover { border-color: rgba(245,240,232,0.6); transform: translateY(-1px); }
+  footer { background: var(--deep-green); border-top: 1px solid rgba(196,149,42,0.15); padding: 3rem 4rem; color: rgba(245,240,232,0.6); }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+  .footer-brand p { font-size: 0.82rem; line-height: 1.8; margin-top: 0.8rem; max-width: 220px; font-family: 'Noto Sans Sinhala', sans-serif; }
+  .footer-col h4 { font-size: 0.72rem; letter-spacing: 0.1em; color: rgba(245,240,232,0.4); text-transform: uppercase; margin-bottom: 1rem; font-family: sans-serif; }
+  .footer-col a { display: block; text-decoration: none; color: rgba(245,240,232,0.6); font-size: 0.85rem; margin-bottom: 0.5rem; transition: color 0.2s; font-family: 'Noto Sans Sinhala', sans-serif; }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom { border-top: 1px solid rgba(245,240,232,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; font-family: 'Noto Sans Sinhala', sans-serif; }
+  .footer-bottom-right { color: rgba(245,240,232,0.4); font-family: sans-serif; font-size: 0.72rem; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .hero h1 { animation: fadeUp 0.7s ease both; }
+  .hero-subtitle { animation: fadeUp 0.7s 0.1s ease both; }
+  .hero-buttons { animation: fadeUp 0.7s 0.2s ease both; }
+  @media (max-width: 900px) {
+    nav { display: none; }
+    section { padding: 3rem 1.5rem; }
+    .hero { padding: 5rem 1.5rem 3rem; }
+    .tawheed-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .pillars-five { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  }
+  @media (max-width: 600px) {
+    .pillars-five { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.2rem; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">ص</div>
+    <div>
+      <div class="nav-logo-text">සත්‍යය</div>
+      <div class="nav-logo-sub">SRI LANKA · DA'WAH</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#tawheed">මැවුම්කරු</a></li>
+    <li><a href="#science">කුර්ආනය</a></li>
+    <li><a href="#prophets">නබිවරු</a></li>
+    <li><a href="#pillars">ජීවන මග</a></li>
+    <li><a href="#faq">ප්‍රශ්න</a></li>
+    <li><a href="#cta">ඔබට ආධ</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg-arabic">الله</div>
+  <div class="hero-label">ශ්‍රී ලංකාවේ සිංහල භාෂාවෙන්</div>
+  <h1>ඉස්ලාම් යනු<br><em>ඇත්තටම කුමක්ද?</em></h1>
+  <p class="hero-subtitle">
+    මෙය ඔබට ආරාධනයකි. තර්කයක් නොවේ. බල කිරීමක් නොවේ.<br>
+    ඔබේම භාෂාවෙන්, ඔබේම වේගයෙන්, විවෘත හදවතකින් සත්‍යය සොයා බලන්න.
+  </p>
+  <div class="hero-buttons">
+    <a href="#tawheed" class="btn-primary">ආරම්භ කරන්න →</a>
+    <a href="#science" class="btn-outline">කුර්ආනය ගැන දැනගන්න</a>
+  </div>
+  <div class="hero-verse">
+    <div class="hero-verse-arabic">لَآ إِكْرَاهَ فِى ٱلدِّينِ</div>
+    <div>
+      <div class="hero-verse-text">"ආගමේ බල කිරීමක් නොමැත."</div>
+      <div class="hero-verse-ref">පිවිතුරු කුර්ආනය · 2:256</div>
+    </div>
+  </div>
+</section>
+
+<section class="tawheed" id="tawheed">
+  <div class="section-label">තව්හීද් · මැවුම්කරුගේ ඒකීයත්වය</div>
+  <h2 class="section-title">එක මැවුම්කරුවෙක්.<br><em>සැබෑ.</em></h2>
+  <div class="tawheed-grid">
+    <div class="tawheed-left">
+      <p>ඉස්ලාමයේ මූලික ඉගැන්වීම මෙයසි: මෙම අසීමිත විශ්වය තනිවම පැමිණ නැත. එහි පිටුපස මැවුම්කරුවෙක් සිටී — ඒකීය, ඔහුට සමානයන් නැති, උපන් නොවූ, ජනිත නොකළ, ආරම්භයක් හෝ අවසානයක් නැති.</p>
+      <p>ඔහුට හවුල්කරු නැත. දරුවන් නැත. සමානයන් නැත. සියල්ල ඔහු මත රඳා පවතී. ඔහු කිසිවක් මත රඳා නොපවතී. ඔබේ සිතුවිලි පවා ඔහු දනියි.</p>
+      <div class="tawheed-pillars">
+        <div class="pillar">
+          <div class="pillar-num">01</div>
+          <div class="pillar-title">ඒකීය</div>
+          <div class="pillar-desc">ඔහුට හවුල්කරු නැත. දරුවන් නැත. සමානයන් නැත.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">02</div>
+          <div class="pillar-title">ස්වාධීන</div>
+          <div class="pillar-desc">සියල්ල ඔහු මත රඳා පවතී. ඔහු කිසිවක් මත රඳා නොපවතී.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">03</div>
+          <div class="pillar-title">අසීමිත දැනුම</div>
+          <div class="pillar-desc">ඔබේ සිතුවිලි පවා ඔහු දනියි. ඔබට වඩා ඔබව ඔහු දනියි.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">04</div>
+          <div class="pillar-title">අසීමිත දයාව</div>
+          <div class="pillar-desc">අල්-රහ්මාන්, අල්-රහීම් — සියල්ල වැඩෙන මූලය දයාවයි.</div>
+        </div>
+      </div>
+    </div>
+    <div class="tawheed-right">
+      <div class="tawheed-surah-arabic">
+        قُلْ هُوَ ٱللَّهُ أَحَدٌ ۝<br>
+        ٱللَّهُ ٱلصَّمَدُ ۝<br>
+        لَمْ يَلِدْ وَلَمْ يُولَدْ ۝<br>
+        وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌ
+      </div>
+      <div class="tawheed-surah-text">
+        "කියන්න: ඔහු අල්ලාහ්, ඒකීයයි. අල්ලාහ් සියල්ල රඳා පවතින තැනැත්තාය. ඔහු කිසිවෙකු ජනිත නොකෙය, ජනිත වූයේ ද නැත. ඔහුට සමාන කිසිවෙක් නොමැත."
+        <div class="tawheed-surah-ref">සූරා අල්-ඉඛ්ලාස් · 112</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="science" id="science">
+  <div class="section-label">කුර්ආනයේ විද්‍යාත්මක සංඥා</div>
+  <h2 class="section-title">වසර 1,400කට පෙර ලියැවුණු පොතක.<br><em>නූතන විද්‍යාව.</em></h2>
+  <p class="science-intro">කුර්ආනය විද්‍යාත්මක පෙළ පොතක් නොවේ. නමුත් එහි, නූතන විද්‍යාව සොයාගත් කරුණු, ඒවා සොයාගන්නට වසර සිය ගණනකට පෙර, ස්පෂ්ටව සඳහන් කර ඇත.</p>
+  <div class="science-cards">
+    <div class="science-card">
+      <div class="science-card-num">01</div>
+      <h3>මානව භ්‍රෑණයේ අවධීන්</h3>
+      <blockquote>"අපි මිනිසා මැටි සාරයෙන් මැවුවෙමු. ශුක්‍රාණුව ලේ කැටියක් කළෙමු, පසුව මස් කැටියක් කළෙමු, පසුව අස්ථි කළෙමු, පසුව අස්ථි මසින් ආවරණය කළෙමු."</blockquote>
+      <div class="science-card-ref">කුර්ආනය 23:12-14</div>
+      <p>1980 දී කැනේඩියාන මහාචාර්ය කීත් එල්. මූර් විසින් සත්‍යාපනය කරන ලදී.</p>
+    </div>
+    <div class="science-card">
+      <div class="science-card-num">02</div>
+      <h3>පුළුල් වන විශ්වය</h3>
+      <blockquote>"අහස අපි අතින් ශක්තියෙන් ගොඩනැගුවෙමු, සහ අපි එය නිරන්තරයෙන් පුළුල් කරන්නෙමු."</blockquote>
+      <div class="science-card-ref">කුර්ආනය 51:47</div>
+      <p>1929 වර්ෂයේ දී එඩ්වින් හබල් සොයාගත් විශ්වය පුළුල් වන බව — ඉස්ලාම් කුර්ආනයෙන් වසර 1,400කට පෙර ප්‍රකාශ කර ඇත.</p>
+    </div>
+    <div class="science-card">
+      <div class="science-card-num">03</div>
+      <h3>ගැඹුරු මුහුදේ අන්ධකාරය</h3>
+      <blockquote>"ගැඹුරු මුහුදේ අන්ධකාරයක් වැනියි, එක මත එක තරංග ආවරණය කරයි... අන්ධකාරයක්, එක මත එක."</blockquote>
+      <div class="science-card-ref">කුර්ආනය 24:40</div>
+      <p>මීටර් 200ට වැඩි ගැඹුරේ සම්පූර්ණ අන්ධකාරය — සබ්මැරීන සමඟ සොයාගත්තේ ගත වූ ශතවර්ෂයේ දීය.</p>
+    </div>
+    <div class="science-card">
+      <div class="science-card-num">04</div>
+      <h3>කඳු — පෘථිවියේ ඇණ</h3>
+      <blockquote>"කඳු, පෘථිවියට ඇණ ලෙස අපි තැබුවේ නැද්ද? එමගින් එය නොසැලී පවතී."</blockquote>
+      <div class="science-card-ref">කුර්ආනය 78:7, 16:15</div>
+      <p>භූවිද්‍යාව පෙන්වන්නේ කඳුවලට පෘථිවි පෘෂ්ඨය ස්ථීර කරන, භූගත මූලයන් ඇති බව.</p>
+    </div>
+  </div>
+</section>
+
+<section class="prophets" id="prophets">
+  <div class="section-label">එකම පණිවිඩය · සියලු කාලවල</div>
+  <h2 class="section-title">අල්ලාහ්ෙ නබිවරු —<br><em>කවදත්, සියල්ලන්ට.</em></h2>
+  <p class="prophets-subtitle">ඉස්ලාම් යනු නව ආගමක් නොවේ. එය මැවුම්කරු, ආදම් තුමන්ගේ සිට මුහම්මද් صلى الله عليه وسلم දක්වා, මානව වර්ගයාට යැවූ අඛණ්ඩ සත්‍ය පණිවිඩයයි. සෑම නබිවරයෙක්ම ගෙනා එකම මූලික පණිවිඩය — "අල්ලාහ් හැර වෙන දෙවියෙක් නැත."</p>
+  <div class="prophets-grid">
+    <div class="prophet-card">
+      <div class="prophet-arabic">آدم</div>
+      <div class="prophet-name">ආදම්</div>
+      <div class="prophet-name-en">Adam</div>
+      <div class="prophet-desc">පළමු මනුෂ්‍යයා සහ පළමු නබි.</div>
+    </div>
+    <div class="prophet-card">
+      <div class="prophet-arabic">نوح</div>
+      <div class="prophet-name">නූහ්</div>
+      <div class="prophet-name-en">Noah</div>
+      <div class="prophet-desc">ජල ගැල්මෙන් මනුෂ්‍ය වර්ගයා බේරාගත් නබි.</div>
+    </div>
+    <div class="prophet-card">
+      <div class="prophet-arabic">إبراهيم</div>
+      <div class="prophet-name">ඉබ්‍රාහීම්</div>
+      <div class="prophet-name-en">Abraham</div>
+      <div class="prophet-desc">අල්ලාහ්ගේ මිතුරා ලෙස හැඳින්වූ නබි.</div>
+    </div>
+    <div class="prophet-card">
+      <div class="prophet-arabic">موسى</div>
+      <div class="prophet-name">මූසා</div>
+      <div class="prophet-name-en">Moses</div>
+      <div class="prophet-desc">තව්රාත් ග්‍රන්ථය ලද නබි.</div>
+    </div>
+    <div class="prophet-card">
+      <div class="prophet-arabic">داود</div>
+      <div class="prophet-name">දාවූද්</div>
+      <div class="prophet-name-en">David</div>
+      <div class="prophet-desc">සබූර් ග්‍රන්ථය ලද රජ සහ නබි.</div>
+    </div>
+    <div class="prophet-card">
+      <div class="prophet-arabic">عيسى</div>
+      <div class="prophet-name">ඊසා</div>
+      <div class="prophet-name-en">Jesus</div>
+      <div class="prophet-desc">කුර්ආනයේ වාර 25ක් සඳහන් මහත් නබි.</div>
+    </div>
+    <div class="prophet-card" style="background: var(--dark-green);">
+      <div class="prophet-arabic" style="color: var(--gold-light);">محمد</div>
+      <div class="prophet-name" style="color: var(--cream);">මුහම්මද් ﷺ</div>
+      <div class="prophet-name-en" style="color: var(--gold);">Muhammad</div>
+      <div class="prophet-desc" style="color: rgba(245,240,232,0.7);">අවසන් නබි. සියලු මානව වර්ගයාට යවන ලද.</div>
+    </div>
+  </div>
+  <div class="prophets-verse-box">
+    <div class="prophets-verse-arabic">قُولُوا آمَنَّا بِاللَّهِ وَمَا أُنزِلَ إِلَيْنَا<br>وَمَا أُنزِلَ إِلَىٰ إِبْرَاهِيمَ وَإِسْمَاعِيلَ<br>وَمَا أُوتِيَ مُوسَىٰ وَعِيسَىٰ</div>
+    <div class="prophets-verse-text">
+      <p>"කියන්න: අපි අල්ලාහ්ව, අපට පහළ කරන ලද දේ, ඉබ්‍රාහීම් සහ ඉස්මාඊල් සහ ඉස්හාක් සහ යාකූබ් සහ එම ගෝත්‍රවලට පහළ කරන ලද දේ, මූසා සහ ඊසාට ලබා දුන් දේ — සියල්ලටම විශ්වාස කරමු."</p>
+      <div class="ref">කුර්ආනය 2:136</div>
+    </div>
+  </div>
+</section>
+
+<section class="pillars-section" id="pillars">
+  <div class="section-label">ඉස්ලාමයේ ජීවන මග</div>
+  <h2 class="section-title">විශ්වාසය හදවතේ.<br><em>ක්‍රියාව ජීවිතයේ.</em></h2>
+  <p class="pillars-intro">ඉස්ලාම් යනු හුදෙක් විශ්වාසයක් නොවේ — එය සම්පූර්ණ ජීවන මගකි. දෙවියන් සමඟ ඔබේ සම්බන්ධතාවය සැකසෙන සිදුවීම් පහක්.</p>
+  <div class="pillars-five">
+    <div class="pillar-box">
+      <div class="pillar-box-num">01</div>
+      <div class="pillar-box-title">ෂහාදා</div>
+      <div class="pillar-box-desc">"අල්ලාහ් හැර වෙන දෙවියෙක් නැත. මුහම්මද් ﷺ අල්ලාහ්ගේ නබිය." මෙය ප්‍රකාශ කිරීමයි, විශ්වාසය ආරම්භ වන්නේ.</div>
+    </div>
+    <div class="pillar-box">
+      <div class="pillar-box-num">02</div>
+      <div class="pillar-box-title">සලාහ්</div>
+      <div class="pillar-box-desc">දිනකට පස්වරක් නැමදුම. දෙවියන් සමඟ සෘජු සම්බන්ධතාවය — මැදිහත්කරුවන් නැත.</div>
+    </div>
+    <div class="pillar-box">
+      <div class="pillar-box-num">03</div>
+      <div class="pillar-box-title">සකාත්</div>
+      <div class="pillar-box-desc">ධනවතුන් දුප්පතුන්ට වසරකට 2.5%ක් දන්දීම. දන්දීම ඉල්ලීමක් නොවේ — යුතුකමක්.</div>
+    </div>
+    <div class="pillar-box">
+      <div class="pillar-box-num">04</div>
+      <div class="pillar-box-title">සව්ම්</div>
+      <div class="pillar-box-desc">රමදාන් මාසයේ උපවාසය. ආත්ම පාලනය, දෙවියන් මතක් කිරීම, දුප්පතුන්ගේ දුක දැනීම.</div>
+    </div>
+    <div class="pillar-box">
+      <div class="pillar-box-num">05</div>
+      <div class="pillar-box-title">හජ්</div>
+      <div class="pillar-box-desc">හැකි සෑම මුස්ලිම්වරයෙක්ම ජීවිතයේ වරක් මක්කා වන්දනා කිරීම — සියලු වර්ගවල සම සමානත්වය.</div>
+    </div>
+  </div>
+  <div class="ethics-grid">
+    <div class="ethic-card">
+      <div class="ethic-title">මාපියන්ට ගරු කිරීම</div>
+      <div class="ethic-quote">"ඔබේ රබ් නියෝග කෙය ඔහු හැර වෙන කිසිවෙකුට නැමදීම නොකරන ලෙසත්, මාපියන්ට කරුණාව පෙන්වන ලෙසත්." — 17:23</div>
+    </div>
+    <div class="ethic-card">
+      <div class="ethic-title">අසල්වැසියන්ට කරුණාව</div>
+      <div class="ethic-quote">"ඔහු තම අසල්වැසියා කුසගිනිව සිටියදී, තමා සෑහෙන සේ අනුභව කරන මිනිසා, විශ්වාසී නොවේ." — නබි ﷺ</div>
+    </div>
+    <div class="ethic-card">
+      <div class="ethic-title">ලෝකයටම යුක්තිය</div>
+      <div class="ethic-quote">"ඔබ ඔබටම, මාපියන්ට, සමීපතමයන්ට හෝ විරුද්ධව වුවද, යුක්තිය ස්ථාපිත කරන්නන් වන්න." — 4:135</div>
+    </div>
+    <div class="ethic-card">
+      <div class="ethic-title">සතුන්ට පවා දයාව</div>
+      <div class="ethic-quote">"සෑම ජීවී සත්වයෙකුට කරුණාවක් කිරීමේ දී ඔබට ප්‍රතිඵලයක් ඇත." — නබි ﷺ</div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="section-label">ඉස්ලාම් පිළිබඳ සාමාන්‍ය ප්‍රශ්න</div>
+  <h2 class="section-title">අසන දේටම,<br><em>අවංක පිළිතුරු.</em></h2>
+  <div class="faq-list">
+    <div class="faq-item open">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>01 &nbsp;&nbsp; ඉස්ලාම් කියන්නේ ත්‍රස්ත්‍රතවාදයද?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">කොහෙත්ම නැත. කුර්ආනය පැහැදිලිව කියනවා: "කවෙකු නිර්දෝෂ පුද්ගලයෙකු මරා දැමුවද, ඔහු මුළු මනව වර්ගම මරා දැමුවාක් මෙනි." (5:32) ලොව මුස්ලිම්වරුන් බිලියන 2කට වැඩි අතර, 99.9%කට වඩා වැඩි ප්‍රමාණයක් සාමකාමී ජීවිත ගත කරති.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>02 &nbsp;&nbsp; මුස්ලිම් කාන්තාවන් පීඩාවට පත්ව ඇත්ද?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">ඉස්ලාම් කාන්තාවට ගරු සහ අයිතිවාසිකම් ලබා දෙයි. කුර්ආනය ප්‍රකාශ කරන්නේ කාන්තාවන් සහ පිරිමි අල්ලාහ් ඉදිරියේ සමාන බවයි. ලෝකයේ බොහෝ ශිෂ්‍යාවන්, ව්‍යාපාරිකයන් සහ නායිකාවන් ගෞරවනීය ලෙස හිජාබ් ධරිති.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>03 &nbsp;&nbsp; ඉස්ලාම් යේසුස් වහන්සේට ගරු කරනවාද?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">ඔව්! ඊසා (යේසුස්) ඉස්ලාමයේ ඉතා ගෞරවනීය නබිවරයෙකි. ඔහු කුර්ආනයේ වාර 25ක් සඳහන් වේ. වෙනස නම් ඔහු ශ්‍රේෂ්ඨ නබිවරයෙකු ලෙස පිළිගැනීමයි, දෙවිකමනස ලෙස නොවේ.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>04 &nbsp;&nbsp; මුස්ලිම්වරු අල්ලාහ් සහ දෙවියන් කියන්නේ එකද?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">ඔව්, "අල්ලාහ්" යනු අරාබි භාෂාවෙන් "The God" — දෙවිදූ — යන අර්ථයයි. ක්‍රිස්තියානි සහ යුදෙව් අරාබිවරු ද ඔවුන්ගේ ප්‍රාර්ථනාවල "අල්ලාහ්" යන වචනය භාවිත කරති.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>05 &nbsp;&nbsp; ඉස්ලාම් වෙනත් ආගම්වලට පහර දේද?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">නොවේ. ඉස්ලාම් ආගමේ නිදහස ශ්‍රේෂ්ඨ කරගනියි. "ආගමේ බල කිරීමක් නොමැත" (2:256). ඉස්ලාමී ඉතිහාසය පුරා මුස්ලිම් ප්‍රදේශවල ක්‍රිස්තියානීන්, යුදෙව්, හින්දූ සහ අනෙකුත් ඇදහිලිකරුවෝ ශාන්තිව ජීවත් වූහ.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        <span>06 &nbsp;&nbsp; කුර්ආනය වෙනස් වී ඇද්ද?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">නොවේ. කුර්ආනය ලෝකයේ වාර ගණනාවක් සත්‍යාපනය කර ඇති වෙනස් නොවූ ග්‍රන්ථයයි. කාලය හරහා ලක්ෂ ගණනක් හාෆිස් (කුර්ආනය කටපාඩම් කර ඇත්ත) ජීවත් ව ඇත. ලෝකයේ සෑම කෙළවරකාවල ඇති කුර්ආනය වෙනස් නොවේ.</div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="stories">
+  <div class="section-label">සොයන්නන්ගේ වදන්</div>
+  <h2 class="section-title">ඉස්ලාම් වෙත<br><em>ආකර්ෂණය වූයේ.</em></h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-quote">කුර්ආනයේ සඳහන් මානව භ්‍රෑණයේ අවධීන් ගැන කියවූ විට. මගේ විද්‍යාත්මක මනස නිහඬ වූයේ එතැන දී.</div>
+      <div class="testimonial-attr">— A. කොළඹ</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">"ආගමේ බල කිරීමක් නොමැත" යන වදන. මට ආදරය කළ දෙවියන් මාව තෝරාගන්නට ඉඩ දුන්නේය.</div>
+      <div class="testimonial-attr">— M. මහනුවර</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote">ලොව සියලු මිනිසුන් එක ආදම්ගේ දරුවන් — ජාතිය, වර්ණය, භාෂාව ඉස්ලාමයේ වෙනසක් කරන්නේ නැහැ.</div>
+      <div class="testimonial-attr">— S. ගාල්ල</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="cta">
+  <div class="section-label">ඔබේ දෑත අල්ලාගෙන</div>
+  <h2 class="section-title">තවත් දැනගන්න<br><em>කැමතිද?</em></h2>
+  <p class="cta-subtitle">කිසිම බල කිරීමක් නැහැ. නොමිලේ සිංහල කුර්ආනයක් තැපැල් කරමු, හෝ ඔබට කතා කරන්න කැමති අයෙකු සොයා දෙමු.</p>
+  <div class="cta-buttons">
+    <a href="#" class="btn-gold">නොමිලේ සිංහල කුර්ආනය →</a>
+    <a href="#" class="btn-outline-light">WhatsApp සංවාදය →</a>
+    <a href="#" class="btn-outline-light">ඔබ අසල මුස්ලිම් පල්ලිය →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo" style="text-decoration:none; color: var(--cream);">
+        <div class="nav-logo-icon">ص</div>
+        <div>
+          <div class="nav-logo-text" style="color: var(--cream);">සත්‍යය</div>
+          <div class="nav-logo-sub">SRI LANKA · DA'WAH</div>
+        </div>
+      </div>
+      <p>ශ්‍රී ලංකාවේ සිංහල කතා කරන සහෝදර සහෝදරියන්ට ඉස්ලාම් පිළිබඳ ආරාධනයක්. නොමිලේ. බලකිරීමක් නැතිව.</p>
+    </div>
+    <div class="footer-col">
+      <h4>සොයා බලන්න</h4>
+      <a href="#tawheed">මැවුම්කරු</a>
+      <a href="#science">කුර්ආනයේ සංඥා</a>
+      <a href="#prophets">නබිවරු</a>
+      <a href="#pillars">ජීවන මග</a>
+    </div>
+    <div class="footer-col">
+      <h4>සම්පත්</h4>
+      <a href="#">සිංහල කුර්ආනය</a>
+      <a href="#">නොමිලේ පොත්</a>
+      <a href="#">වචන කෝෂය</a>
+      <a href="#">ශබ්ද හා වීඩියෝ</a>
+    </div>
+    <div class="footer-col">
+      <h4>සම්බන්ධ වන්න</h4>
+      <a href="#">WhatsApp</a>
+      <a href="#">ඉමේල්</a>
+      <a href="#">ඔබ අසල මුස්ලිම් පල්ලිය</a>
+      <a href="#">අපි ගැන</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 සත්‍යය. දෙවියන්ගේ නාමයෙන්.</span>
+    <span class="footer-bottom-right">ශ්‍රී ලංකාව</span>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+</body>
+</html>
